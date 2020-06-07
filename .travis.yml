@@ -1,0 +1,17 @@
+language: go
+
+install:
+  - go get github.com/spf13/hugo
+
+script:
+  - hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local-dir: public
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  repo: SZLforGithub/SZLforGithub.github.io
+  keep_history: true
+  on:
+    branch: master
