@@ -10,7 +10,8 @@ install:
 
 
 before_script:
-  - mkdir public && git clone https://github.com/SZLforGithub/louis-hugo.git public
+  - mkdir public
+  - git clone https://github.com/SZLforGithub/louis-hugo.git public
 script:
   - hugo
 
