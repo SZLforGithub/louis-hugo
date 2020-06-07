@@ -8,6 +8,9 @@ install:
   - tar xzvf hugo_0.58.3_Linux-64bit.tar.gz
   - export PATH=$PATH:$PWD
 
+
+before_script:
+  - mkdir public && git clone https://github.com/SZLforGithub/louis-hugo.git public
 script:
   - hugo
 
