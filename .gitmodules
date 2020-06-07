@@ -1,3 +1,3 @@
 [submodule "themes/Ananke"]
-	path = themes/Ananke
-	url = https://github.com/SZLforGithub/gohugo-theme-ananke
+    path = themes/Ananke
+    url = https://github.com/SZLforGithub/gohugo-theme-ananke
