@@ -1,0 +1,12 @@
+img[src$='#circle'] {
+    border-radius: 25%;
+    margin: auto;
+    width: 400px;
+    transform:scale(1, 1);
+    transition: all 0.25s ease-out;
+    -webkit-transform all 0.25s ease-out;
+}
+
+img[src$='#circle']:hover {
+    transform:scale(1.05, 1.05);
+}

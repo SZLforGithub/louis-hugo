@@ -1,0 +1,40 @@
+title = "Louis's blog"
+baseURL = "https://szlforgithub.github.io/"
+languageCode = "en-us"
+theme = "Ananke"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 6 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+summaryLength = 1
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = "/images/icon.png"
+  site_logo = ""
+  description = "惟有書寫，才能讓知識存活。"
+  facebook = ""
+  twitter = ""
+  instagram = ""
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  prism_css = "prism.css"
+  prism_js = "prism.js"
+  custom_css = ["dist/css/custom.css"]
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/banner.jpg"
+  recent_posts_number = 2
