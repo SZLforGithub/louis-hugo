@@ -3,4 +3,4 @@
     url = https://github.com/SZLforGithub/gohugo-theme-ananke
 [submodule "public"]
 	path = public
-	url = git@github.com:SZLforGithub/SZLforGithub.github.io.git
+	url = https://github.com/SZLforGithub/SZLforGithub.github.io.git
