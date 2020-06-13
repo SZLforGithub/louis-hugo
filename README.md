@@ -2,4 +2,4 @@
 
 # Hugo Repository
 
-Hi, it's just for my Github pages blog.
+It's just for my Github pages blog.
