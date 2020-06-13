@@ -15,12 +15,13 @@ script:
   - hugo
 
 deploy:
-  repo: SZLforGithub/SZLforGithub.github.io
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  local-dir: public
-  target-branch: master
   keep_history: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   on:
     branch: master
+  local-dir: public
+  repo: SZLforGithub/SZLforGithub.github.io
+  target-branch: master
+  
