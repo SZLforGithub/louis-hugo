@@ -8,9 +8,6 @@ toc: true
 disable_share: true
 ---
 
-Git 介紹與常用指令
-===
-
 什麼是 Git？
 ---
 Git 是一種分散式版本控制系統。
