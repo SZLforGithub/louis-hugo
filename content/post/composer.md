@@ -61,7 +61,7 @@ php -r "unlink('composer-setup.php');"
 
 ---
 
-按照上面的方法安裝完後，你會發現你的目錄中多了一個 composer.phar 檔案，執行 ```php composer.phar``` ，出現 Composer 圖案就代表成功了。
+按照上面的方法安裝完後，你會發現你的目錄中多了一個 composer.phar 檔案，執行 {{< inlineCode >}}php composer.phar{{< /inlineCode >}} ，出現 Composer 圖案就代表成功了。
 
 ![composer_success](https://i.imgur.com/ZsbNXIi.png)
 
@@ -71,7 +71,7 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 ```
 
-直接執行 ```composer``` ，如果看到一樣的 Composer 圖案就代表成功了。
+直接執行 {{< inlineCode >}}composer{{< /inlineCode >}} ，如果看到一樣的 Composer 圖案就代表成功了。
 
 
 如何使用？
@@ -95,19 +95,19 @@ composer init
 composer require --dev phpunit/phpunit ^9.1
 ```
 
-```composer require``` 這個指令會安裝你指定的套件，並新增一個 composer.lock (如果沒有的話)，然後把這個套件的資訊記錄在 composer.lock 和 composer.json 中。
+{{< inlineCode >}}composer require{{< /inlineCode >}} 這個指令會安裝你指定的套件，並新增一個 composer.lock (如果沒有的話)，然後把這個套件的資訊記錄在 composer.lock 和 composer.json 中。
 
---dev 的意思則是相關設定會寫在 composer.json 和 composer.lock 的 require-dev 中，這樣的區分是因為有些套件只需要在測試環境中執行 (development or testing)，在正式環境中並不需要 (production)，在正式環境中只需要執行 ```composer install --no-dev``` 就可以排除掉 require-dev 中的套件 ([詳見此](https://stackoverflow.com/questions/19117871/what-is-the-difference-between-require-and-require-dev-sections-in-composer-json))。
+--dev 的意思則是相關設定會寫在 composer.json 和 composer.lock 的 require-dev 中，這樣的區分是因為有些套件只需要在測試環境中執行 (development or testing)，在正式環境中並不需要 (production)，在正式環境中只需要執行 {{< inlineCode >}}composer install --no-dev{{< /inlineCode >}} 就可以排除掉 require-dev 中的套件 ([詳見此](https://stackoverflow.com/questions/19117871/what-is-the-difference-between-require-and-require-dev-sections-in-composer-json))。
 
 最後的 ^9.1 則代表版本。
 
 ### composer install
-```composer install``` 指令會去找專案內的 composer.lock，並按照裡面記錄的套件和版號安裝。如果找不到 composer.lock ，就會按照 composer.json 的紀錄安裝，並產生一個 composer.lock。
+{{< inlineCode >}}composer install{{< /inlineCode >}} 指令會去找專案內的 composer.lock，並按照裡面記錄的套件和版號安裝。如果找不到 composer.lock ，就會按照 composer.json 的紀錄安裝，並產生一個 composer.lock。
 
 ### composer update
-```composer update``` 則會根據 composer.json 中指定的版本下載。
+{{< inlineCode >}}composer update{{< /inlineCode >}} 則會根據 composer.json 中指定的版本下載。
 
-也就是說，如果有 composer.lock，就乖乖用 ```composer install``` 來確保自己的套件版本與原開發者是一模一樣的。若是用 ```composer update``` 的話，就有套件的版本可能不同導致的不相容問題。另外，在沒有 composer.lock 的情況下， ```composer install``` 和 ```composer update``` 做的事情是一樣的 (讀取 composer.json 並安裝套件)。
+也就是說，如果有 composer.lock，就乖乖用 {{< inlineCode >}}composer install{{< /inlineCode >}} 來確保自己的套件版本與原開發者是一模一樣的。若是用 {{< inlineCode >}}composer update{{< /inlineCode >}} 的話，就有套件的版本可能不同導致的不相容問題。另外，在沒有 composer.lock 的情況下， {{< inlineCode >}}composer install{{< /inlineCode >}} 和 {{< inlineCode >}}composer update{{< /inlineCode >}} 做的事情是一樣的 (讀取 composer.json 並安裝套件)。
 
 以上就是基本的 Composer 使用方式，想了解更多請至參考資料。
 

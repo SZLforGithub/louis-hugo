@@ -12,17 +12,17 @@ disable_share: true
 
 市面上常見的方法
 ---
-其實要得到使用者 IP 這件事情本身不難，拿磚頭往大學資工系隨便砸，砸到的那個學生應該都有辦法回答這個問題，以 PHP 來說不外乎是去讀取 `$_SERVER` 這個預定義變數，包含了一大堆的參數可以對應到不同的值，這些值可能有可能沒有，有些可以偽造有些無法偽造。
+其實要得到使用者 IP 這件事情本身不難，拿磚頭往大學資工系隨便砸，砸到的那個學生應該都有辦法回答這個問題，以 PHP 來說不外乎是去讀取 {{< inlineCode >}}$_SERVER{{< /inlineCode >}} 這個預定義變數，包含了一大堆的參數可以對應到不同的值，這些值可能有可能沒有，有些可以偽造有些無法偽造。
 
-主要是透過 `$_SERVER['HTTP_CLIENT_IP']` 、 `$_SERVER['HTTP_X_FORWARDED_FOR']` 、 `$_SERVER['REMOTE_ADDR']` 等等的值來取到 IP。
+主要是透過 {{< inlineCode >}}$_SERVER['HTTP_CLIENT_IP']{{< /inlineCode >}} 、 {{< inlineCode >}}$_SERVER['HTTP_X_FORWARDED_FOR']{{< /inlineCode >}} 、 {{< inlineCode >}}$_SERVER['REMOTE_ADDR']{{< /inlineCode >}} 等等的值來取到 IP。
 
 問題
 ---
-接下來就是有趣的地方了，這些值除了 `$_SERVER['REMOTE_ADDR']` 以外**都是可以偽造的**，但唯一可靠的 `$_SERVER['REMOTE_ADDR']` 得到的未必是使用者真實的 IP ，例如使用者有代理伺服器、或自己本身有使用反向代理伺服器，這樣的情況通常會去讀取 `$_SERVER['HTTP_X_FORWARDED_FOR']` ，這個欄位是特地用來辨識有透過 HTTP 代理的使用者 IP ，在正常情況下他會儲存每一個經過的 IP (格式為 clientIP, proxy1, proxy2...)。
+接下來就是有趣的地方了，這些值除了 $_SERVER['REMOTE_ADDR'] 以外**都是可以偽造的**，但唯一可靠的 $_SERVER['REMOTE_ADDR'] 得到的未必是使用者真實的 IP ，例如使用者有代理伺服器、或自己本身有使用反向代理伺服器，這樣的情況通常會去讀取 $_SERVER['HTTP_X_FORWARDED_FOR'] ，這個欄位是特地用來辨識有透過 HTTP 代理的使用者 IP ，在正常情況下他會儲存每一個經過的 IP (格式為 clientIP, proxy1, proxy2...)。
 
-麻煩的地方在於：我們雖然可以透過 `$_SERVER['REMOTE_ADDR']` 取得安全可靠的 IP ，但卻無法確定這是使用者真正的 IP ；當我們想透過 `$_SERVER['HTTP_X_FORWARDED_FOR']` 來取得真正的 IP 時，卻無法確認這個 IP 是安全可靠的。
+麻煩的地方在於：我們雖然可以透過 {{< inlineCode >}}$_SERVER['REMOTE_ADDR']{{< /inlineCode >}} 取得安全可靠的 IP ，但卻無法確定這是使用者真正的 IP ；當我們想透過 {{< inlineCode >}}$_SERVER['HTTP_X_FORWARDED_FOR']{{< /inlineCode >}} 來取得真正的 IP 時，卻無法確認這個 IP 是安全可靠的。
 
-這個問題可大可小，小一點只是無法取得正確的 IP ，大一點別有用心的使用者可以透過偽造 `$_SERVER['HTTP_X_FORWARDED_FOR']` 的方式達成 SQL injection 。
+這個問題可大可小，小一點只是無法取得正確的 IP ，大一點別有用心的使用者可以透過偽造 {{< inlineCode >}}$_SERVER['HTTP_X_FORWARDED_FOR']{{< /inlineCode >}} 的方式達成 SQL injection 。
 
 一方面再一次的驗證「所有來自客戶端的資料都是不可信任的」，另一方面也說明了 IP 無法成為辨別使用者身份的銀彈，至於如何辨別使用者身份，我們下一期會特地發一篇文章給各位介紹。
 
@@ -86,12 +86,9 @@ $ch = curl_init();
 ![](https://i.imgur.com/t9gttlY.png)
 顯然 server.php 乖乖的被我們騙了。
 
-這還是 server 端有乖乖消毒的情況，要是沒有消毒，我們把 X-FORWARDED-FOR 改成 `"Robert');DROP TABLE students;--"` 之類的，就會聽到DB BOMB 的一聲跟大家說再見了。
+這還是 server 端有乖乖消毒的情況，要是沒有消毒，我們把 X-FORWARDED-FOR 改成 {{< inlineCode >}}"Robert');DROP TABLE students;--"{{< /inlineCode >}} 之類的，就會聽到DB BOMB 的一聲跟大家說再見了。
 
 參考資料
 ---
-如何正確的取得使用者 IP？
-https://devco.re/blog/2014/06/19/client-ip-detection/
-
-PHP 官方文件 ($_SERVER)
-https://www.php.net/manual/es/reserved.variables.server.php
+1. [如何正確的取得使用者 IP？](https://devco.re/blog/2014/06/19/client-ip-detection/)
+2. [PHP 官方文件 ($_SERVER)](https://www.php.net/manual/es/reserved.variables.server.php)

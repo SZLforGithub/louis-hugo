@@ -20,7 +20,7 @@ Git 是一種分散式版本控制系統。
 
 在 Git 中，每個協作者都會擁有一個自己完整的版本庫，你可以在自己的版本庫中盡情的開 branch、修改程式碼，只要不 push 到主要的版本庫，你不會影響任何一個與你協作的夥伴。
 
-而只要將專案 clone 到自己的設備，你不需要連網，就可以在自己的版本庫中查看歷史紀錄(git log)、創建分支(git branch)、切換分支(git checkout)、甚至是提交(git commit)。也就是說假設你遇難隻身一人漂流到孤島，突然有一股修改專案的衝動，打開筆電就可以開始工作。
+而只要將專案 clone 到自己的設備，你不需要連網，就可以在自己的版本庫中查看歷史紀錄({{< inlineCode >}}git log{{< /inlineCode >}})、創建分支({{< inlineCode >}}git branch{{< /inlineCode >}})、切換分支({{< inlineCode >}}git checkout{{< /inlineCode >}})、甚至是提交({{< inlineCode >}}git commit{{< /inlineCode >}})。也就是說假設你遇難隻身一人漂流到孤島，突然有一股修改專案的衝動，打開筆電就可以開始工作。
 
 若您在公司使用的是SVN，但又想體驗 Git 自由自在的感覺，Git 也有和 SVN 溝通的 bridge，請 Google git svn。
 
@@ -81,7 +81,7 @@ U = updated but unmerged
 
 ---
 ### git diff
-直接輸入 `git diff` 可以看到當前工作目錄和暫存區的差別。
+直接輸入 {{< inlineCode >}}git diff{{< /inlineCode >}} 可以看到當前工作目錄和暫存區的差別。
 ```git=
 git diff <commitId1> <commitId2>
 ```
@@ -186,7 +186,7 @@ git merge myfeature
 
 ---
 ### git rebase
-`git rebase` 是一個很有趣的功能，也有其他不同功能的用法，這裡主要介紹它在合併上的使用，進階的使用請見下方「我可以修改以前的 commit 嗎？」。
+{{< inlineCode >}}git rebase{{< /inlineCode >}} 是一個很有趣的功能，也有其他不同功能的用法，這裡主要介紹它在合併上的使用，進階的使用請見下方「我可以修改以前的 commit 嗎？」。
 
 base 是基準點，也就是分支從哪裡長出來，所以 rebase 的意思接近於「重新定義分支的參考基準」。
 
@@ -196,7 +196,7 @@ git rebase feature01
 ```
 意思就是「我 (feature02) 要重新定義 (re) 我的參考基準 (base)，那個參考基準就是 feature01 」。
 
-以結果來說，feature02 的 commit 會直接接在 feature01 的後面，看起來很像剪下貼上，但對 Git 來說 feature02 的那些 commit 都是新的 commit ，可以從 `git log --oneline`看到他們和原本的 SHA-1 值不一樣。
+以結果來說，feature02 的 commit 會直接接在 feature01 的後面，看起來很像剪下貼上，但對 Git 來說 feature02 的那些 commit 都是新的 commit ，可以從 {{< inlineCode >}}git log --oneline{{< /inlineCode >}}看到他們和原本的 SHA-1 值不一樣。
 
 至於在 feature01 時 rebase feature02 ，和在 feature02 時 rebase feature01 的差別，只在最後 log 上 commit 的順序不同。
 
@@ -207,8 +207,8 @@ git rebase feature01
 git push origin master
 ```
 將分支 master 推上遠端數據庫 origin
-若有設定 remote，不帶參數執行 `git push` 相當於 `git push <remote>`
-若沒有設定 remote ，不帶參數執行 `git push` 相當於 `git push origin`
+若有設定 remote，不帶參數執行 {{< inlineCode >}}git push{{< /inlineCode >}} 相當於 {{< inlineCode >}}git push <remote>{{< /inlineCode >}}
+若沒有設定 remote ，不帶參數執行 {{< inlineCode >}}git push{{< /inlineCode >}} 相當於 {{< inlineCode >}}git push origin{{< /inlineCode >}}
 
 ---
 ### git pull
@@ -216,25 +216,25 @@ git push origin master
 git pull origin master
 ```
 將遠端數據庫 origin 的 master 分支拉下並合併到本地數據庫
-若有設定 remote，不帶參數執行 `git pull` 相當於 `git pull <remote>`
-若沒有設定 remote ，不帶參數執行 `git pull` 相當於 `git pull origin`
+若有設定 remote，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull <remote>{{< /inlineCode >}}
+若沒有設定 remote ，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull origin{{< /inlineCode >}}
 
-`git pull` 做的事情實際上等於 `git fetch` + `git merge`，`git fetch` 會比對本地與遠端的差別，並在本地形成分支，`git merge` 則會將分支合併。
+{{< inlineCode >}}git pull{{< /inlineCode >}} 做的事情實際上等於 {{< inlineCode >}}git fetch{{< /inlineCode >}} + {{< inlineCode >}}git merge{{< /inlineCode >}}，{{< inlineCode >}}git fetch{{< /inlineCode >}} 會比對本地與遠端的差別，並在本地形成分支，{{< inlineCode >}}git merge{{< /inlineCode >}} 則會將分支合併。
 
 ---
 你遇到這樣的問題了嗎？
 ---
 
 ### 正確的使用姿勢？
-`git init` 或是 `git clone` 之後，你可能會手癢先 `git status` 看一下，你會看到一個乾淨的目錄，然後開始編寫程式碼，一邊寫一邊 `git diff` 看自己到底改了哪些東西，改了一個段落在 `git add` 之前或許會 `git branch` 確定一下自己在哪個分支，有錯的話趕快 `git checkout branchName` 到正確的分支，接著 `git add` 把修改存到暫存區，`git status` 看一下是不是正確的狀態，然後 `git commit -m "This is my new git description"`，最後 `git push` 。
+{{< inlineCode >}}git init{{< /inlineCode >}} 或是 {{< inlineCode >}}git clone{{< /inlineCode >}} 之後，你可能會手癢先 {{< inlineCode >}}git status{{< /inlineCode >}} 看一下，你會看到一個乾淨的目錄，然後開始編寫程式碼，一邊寫一邊 {{< inlineCode >}}git diff{{< /inlineCode >}} 看自己到底改了哪些東西，改了一個段落在 {{< inlineCode >}}git add{{< /inlineCode >}} 之前或許會 {{< inlineCode >}}git branch{{< /inlineCode >}} 確定一下自己在哪個分支，有錯的話趕快 {{< inlineCode >}}git checkout branchName{{< /inlineCode >}} 到正確的分支，接著 {{< inlineCode >}}git add{{< /inlineCode >}} 把修改存到暫存區，{{< inlineCode >}}git status{{< /inlineCode >}} 看一下是不是正確的狀態，然後 {{< inlineCode >}}git commit -m "This is my new git description"{{< /inlineCode >}}，最後 {{< inlineCode >}}git push{{< /inlineCode >}} 。
 
 ---
 ### 這行誰寫的！
-一覺醒來發現網站掛了，怎麼多了這一行扣！`git blame index.php` 可以看到 index.php 裡每一行的作者是誰。
+一覺醒來發現網站掛了，怎麼多了這一行扣！{{< inlineCode >}}git blame index.php{{< /inlineCode >}} 可以看到 index.php 裡每一行的作者是誰。
 
 ---
 ### 這個 commit 到底修改了啥？
-先 `git log` 找到那次修改的 commit ID，你或許會用到 
+先 {{< inlineCode >}}git log{{< /inlineCode >}} 找到那次修改的 commit ID，你或許會用到 
 ```git=
 git log --author="Louis.Su"
 ```
@@ -247,7 +247,7 @@ git log --grep="Hey"
 git log -S "functionA"
 ```
 來找到上傳檔案有包含 functionA 的 commit。
-最後`git show commitID`，就可以看到修改記錄了。
+最後{{< inlineCode >}}git show commitID{{< /inlineCode >}}，就可以看到修改記錄了。
 
 ---
 ### 我想修改剛剛的 commit
@@ -255,7 +255,7 @@ git log -S "functionA"
 ```git=
 git commit --amend -m "This is right description"
 ```
-對人類來說只是修改 commit 的訊息，但對 git 來說，這其實是一個全新的 commit 了，可以從 `git log --oneline` 中看到 commit 的 SHA-1 值是不同的。
+對人類來說只是修改 commit 的訊息，但對 git 來說，這其實是一個全新的 commit 了，可以從 {{< inlineCode >}}git log --oneline{{< /inlineCode >}} 中看到 commit 的 SHA-1 值是不同的。
 
 ---
 ### 我可以修改更之前的 commit 嗎？
@@ -266,7 +266,7 @@ Git 本身並沒有修改歷史的工具。但可以使用 rebase 來做到對�
 ```git=
 git rebase -i
 ```
-可以開啟對話模式，要給他一個參數，這個參數可以是 `git rebase -i HEAD~3` 這樣從當前分支往前算的形式，也可以是 `git rebase -i 6ee9b6b` 這樣的 SHA-1 值，意思是「從這一個 commit 往後算到現在位子的所有 commit 」。
+可以開啟對話模式，要給他一個參數，這個參數可以是 {{< inlineCode >}}git rebase -i HEAD~3{{< /inlineCode >}} 這樣從當前分支往前算的形式，也可以是 {{< inlineCode >}}git rebase -i 6ee9b6b{{< /inlineCode >}} 這樣的 SHA-1 值，意思是「從這一個 commit 往後算到現在位子的所有 commit 」。
 
 之後會出現像這樣的列表：
 ```
@@ -310,7 +310,7 @@ edit f7f3f6d fix some bugs
 pick 310154e add some files
 pick a5f4a0d feat: complete a feature
 ```
-存檔離開後， git 會 checkout 到你想修改的 commit ，當你進行完你想做的修改之後， `git add [你有修改的檔案]` ，之後再 `git commit --amend ` 修改 commit message ，最後再輸入 `git rebase --continue` 將 rebase 完成。
+存檔離開後， git 會 checkout 到你想修改的 commit ，當你進行完你想做的修改之後， {{< inlineCode >}}git add [你有修改的檔案]{{< /inlineCode >}} ，之後再 {{< inlineCode >}}git commit --amend {{< /inlineCode >}} 修改 commit message ，最後再輸入 {{< inlineCode >}}git rebase --continue{{< /inlineCode >}} 將 rebase 完成。
 
 另外的 squash 和 fixup 則是用來合併 commit，不同的地方是當你用 squash 要合併時，會把多個要合併的 commit message 放進編輯器裡面讓你修改最後合併的 commit message ；而 fixup 則是把這個 commit 合併到上一個 commit 中，並直接捨棄這個 commit message。
 
@@ -321,14 +321,14 @@ git 的強大之處在於他大部分的指令都是可逆的，但它同樣也�
 這一 part 會先介紹如何反悔，再說明 reset 這個指令的意義，建議看完再操作。
 
 #### 如何將暫存區的檔案移出
-這樣的場景會出現在你修改了兩個檔案，想要分別提交，但你手速太快不小心打了 `git add -A` 全部加到暫存區了。
+這樣的場景會出現在你修改了兩個檔案，想要分別提交，但你手速太快不小心打了 {{< inlineCode >}}git add -A{{< /inlineCode >}} 全部加到暫存區了。
 
 ```git=
 git reset HEAD <filename>
 ```
 
 #### 如何將剛剛的 commit 拆回來
-這樣的場景則出現在後悔剛剛那個 commit 的內容，想拆回來重做，你可以先下 `git log` 或 `git log --oneline` 來看到 SHA-1 值，然後：
+這樣的場景則出現在後悔剛剛那個 commit 的內容，想拆回來重做，你可以先下 {{< inlineCode >}}git log{{< /inlineCode >}} 或 {{< inlineCode >}}git log --oneline{{< /inlineCode >}} 來看到 SHA-1 值，然後：
 ```git=
 git reset 6ee9b6b
 ```
@@ -354,15 +354,15 @@ git reset --hard <commitID>
 ```
 講到這裡聰明的你一定已經隱約感覺到 reset 的意義了，在中文會比較接近「前往」。
 
-而 `--hard` 是參數，有三種常見的： `--mixed` 、 `--soft` 、 `--hard` ，這個參數決定的是「那些我不要的東西最後要去哪裡」
-`--mixed` 是預設，這個模式下的 reset commit 會把 commit 內容丟進工作目錄裡面
-`--soft` 則會把 commit 內容丟進暫存區
-`--hard` 則是工作目錄和暫存區都不會留
+而 {{< inlineCode >}}--hard{{< /inlineCode >}} 是參數，有三種常見的： {{< inlineCode >}}--mixed{{< /inlineCode >}} 、 {{< inlineCode >}}--soft{{< /inlineCode >}} 、 {{< inlineCode >}}--hard{{< /inlineCode >}} ，這個參數決定的是「那些我不要的東西最後要去哪裡」
+`{{< inlineCode >}}--mixed`{{< /inlineCode >}} 是預設，這個模式下的 reset commit 會把 commit 內容丟進工作目錄裡面
+`{{< inlineCode >}}--soft`{{< /inlineCode >}} 則會把 commit 內容丟進暫存區
+`{{< inlineCode >}}--hard`{{< /inlineCode >}} 則是工作目錄和暫存區都不會留
 
 所以前文說的「拆」 commit 其實並不準確，而是「回到」那個 commit 的狀態，不同參數則決定了路過的那幾個檔案將何去何從。
 
 參考資料
 ---
-Git官方文件：https://git-scm.com/book/zh-tw/v2
-為你自己學Git：https://gitbook.tw/
-連猴子都能懂的Git入門指南：https://backlog.com/git-tutorial/tw/
+1. [Git官方文件](https://git-scm.com/book/zh-tw/v2)
+2. [為你自己學Git](https://gitbook.tw/)
+3. [連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/)

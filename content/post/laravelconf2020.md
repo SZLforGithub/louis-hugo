@@ -19,7 +19,7 @@ Laravel Conf 是目前台灣最大的 Laravel 社群。在疫情影響下仍然�
 
 但真的是這樣嗎？
 
-> It's no secret that the performance jump of PHP 7 was originally initiated by attempts to implement JIT for PHP. We started these efforts at Zend (mostly by Dmitry) back in 2011 and since that time tried 3 different implementations. We never moved forward to propose to release any of them, for three main reasons: <font color=#FF6600>They resulted in no substantial performance gains for typical Web apps;</font> They were complex to develop and maintain; We still had additional directions we could explore to improve performance without having to use JIT.
+> It's no secret that the performance jump of PHP 7 was originally initiated by attempts to implement JIT for PHP. We started these efforts at Zend (mostly by Dmitry) back in 2011 and since that time tried 3 different implementations. We never moved forward to propose to release any of them, for three main reasons: {{< color color="#FF6600">}}They resulted in no substantial performance gains for typical Web apps;{{< /color >}} They were complex to develop and maintain; We still had additional directions we could explore to improve performance without having to use JIT.
 
 以上引用自 [PHP 官方的 RFC](https://wiki.php.net/rfc/jit)，其中提到 JIT 並不會對一般的 Web apps 帶來明顯的效能提升，因為 PHP 效能主要受到 I/O-bound 的約束，而 JIT 帶來的 CPU-bound 方面的優勢並不明顯。
 
@@ -46,7 +46,7 @@ Laravel Conf 是目前台灣最大的 Laravel 社群。在疫情影響下仍然�
 ## 大象也能飛翔！聊 Laravel 效能調校
 這一堂相對來說比較基本，大多是對 PHP 本身語法的效能測試，也提出一個想法： PHP 原生函式的 overhead 相對大，減少原生函式呼叫，可能會提升效能。
 
-Laravel 的部分則是提出了 `php artisan optimize`、移除掉多餘的 ServiceProvider 和 Middleware 這幾種方法，並提醒 Eager loading 的重要性，最近開發的專案剛好有使用到，蠻有感觸的。
+Laravel 的部分則是提出了 {{< inlineCode >}}php artisan optimize{{< /inlineCode >}}、移除掉多餘的 ServiceProvider 和 Middleware 這幾種方法，並提醒 Eager loading 的重要性，最近開發的專案剛好有使用到，蠻有感觸的。
 
 沒有超出我預想外的優化方案，但也中規中矩的做了基本的介紹和解釋。
 
