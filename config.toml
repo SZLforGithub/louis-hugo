@@ -5,12 +5,11 @@ theme = "Ananke"
 
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
-hasCJKLanguage = true
 SectionPagesMenu = "main"
 Paginate = 6 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = "UA-169325906-1"
 enableRobotsTXT = true
-summaryLength = 1
+summaryLength = 10
 enableEmoji = true
 
 [sitemap]
