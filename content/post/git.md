@@ -1,6 +1,7 @@
 ---
 title: "Git 簡單介紹與常用指令"
 description: "Git 初心者大全，開著這篇用 Git 就對了！"
+summary: Git 初心者大全，開著這篇用 Git 就對了！。
 featured_image: "/images/git.png"
 tags: [學習筆記,版本控制]
 date: 2020-06-13T16:24:11+08:00

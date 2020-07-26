@@ -1,6 +1,7 @@
 ---
 title: "使用 PHP 獲取使用者 IP 以及漏洞分析"
 description: "你獲取 IP 的方式真的安全嗎？"
+summary: "你獲取 IP 的方式真的安全嗎？"
 featured_image: "/images/security.jpg"
 tags: [學習筆記,資安,PHP]
 date: 2020-06-06T18:21:38+08:00

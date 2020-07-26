@@ -1,6 +1,7 @@
 ---
 title: "Composer 介紹與使用"
 description: "還在 include 一大堆檔案？"
+summary: "Composer 是 PHP 用來管理套件的工具，是現代 PHPer 必備的武器之一。"
 featured_image: "/images/composer.png"
 date: 2020-06-07T19:33:01+08:00
 tags: [學習筆記,PHP]

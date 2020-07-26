@@ -1,6 +1,7 @@
 ---
 title: "Singleton pattern (單例模式) for PHP"
 description: ""
+summary: "單例模式是一種 design pattern，要求一個 Class 只能有一個實例，通常會使用在系統中需要一個全局物件的情況。"
 featured_image: "/images/php.jpg"
 tags: [學習筆記,PHP,design pattern]
 date: 2020-07-26T14:15:24+08:00
