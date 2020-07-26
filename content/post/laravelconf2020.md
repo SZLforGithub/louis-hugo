@@ -6,7 +6,6 @@ tags: [學習筆記,PHP,心得分享]
 date: 2020-07-26T13:18:23+08:00
 toc: true
 disable_share: true
-draft: true
 ---
 Laravel Conf 是目前台灣最大的 Laravel 社群。在疫情影響下仍然如期舉辦，今年是第四屆的 Laravel Conf。
 
