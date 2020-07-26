@@ -32,7 +32,7 @@ enableEmoji = true
   slack = ""
   stackoverflow = ""
   rss = ""
-
+  show_reading_time = true
   prism_css = "prism.css"
   prism_js = "prism.js"
   custom_css = ["dist/css/custom.css"]
