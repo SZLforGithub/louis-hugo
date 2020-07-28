@@ -38,6 +38,7 @@ Laravel Conf 是目前台灣最大的 Laravel 社群。在疫情影響下仍然�
 當下講師沒有直接說出來，不過個人認為應該就是沒有啦，但講師同時也說到現在的網頁仍然有 79% 是 PHP 寫出來的，甚至舉了 Cobol 的例子，我當下腦子裡面就浮現大象變成長毛象的畫面...
 
 當然 PHP 的開發團隊自然也有想到這一點，[同一篇 RFC](https://wiki.php.net/rfc/jit) 也有提到：
+
 > Secondly - using JIT may open the door for PHP being more frequently used in other, non-Web, CPU-intensive scenarios - where the performance benefits will actually be very substantial - and for which PHP is probably not even being considered today.
 
 可以看出開發團隊的野心，或許未來 PHP ~~一統江湖，指日可待~~ 在非 Web、高計算密集的場景也能有一席之地也說不定。
