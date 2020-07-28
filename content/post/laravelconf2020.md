@@ -1,5 +1,5 @@
 ---
-title: "Laravel Conf Taiwan - Less is More 參加心得"
+title: "LaravelConf Taiwan - Less is More 參加心得"
 description: "我就是跟著大家進來看看熱鬧"
 featured_image: "/images/laravelconf2020.jpg"
 tags: [學習筆記,PHP,心得分享]
