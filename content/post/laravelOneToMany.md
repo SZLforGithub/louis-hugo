@@ -1,5 +1,5 @@
 ---
-title: "Laravel one-to-many Relationship"
+title: "Laravel 一對多關聯 (one-to-many Relationship)"
 summary: "Laravel 一對多關聯的學習紀錄。"
 featured_image: "/images/laravel.jpeg"
 tags: [學習筆記,PHP]
