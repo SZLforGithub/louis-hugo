@@ -187,7 +187,7 @@ git merge myfeature
 
 ---
 ### git rebase
-{{< inlineCode >}}git rebase{{< /inlineCode >}} 是一個很有趣的功能，也有其他不同功能的用法，這裡主要介紹它在合併上的使用，進階的使用請見 [Git 常見問題](http://localhost:1313/post/gitproblem/#我可以修改更之前的-commit-嗎)。
+{{< inlineCode >}}git rebase{{< /inlineCode >}} 是一個很有趣的功能，也有其他不同功能的用法，這裡主要介紹它在合併上的使用，進階的使用請見 [Git 常見問題](https://szlforgithub.github.io/post/gitproblem/#我可以修改更之前的-commit-嗎)。
 
 base 是基準點，也就是分支從哪裡長出來，所以 rebase 的意思接近於「重新定義分支的參考基準」。
 
