@@ -196,6 +196,7 @@ function createPostWithCreateMany($user_id, $post_id)
 }
 ```
 
+### Save
 ```php
 function createPostWithSave($user_id)
 {
@@ -279,6 +280,18 @@ public function delete($user_id)
     // ...
 }
 ```
+
+### Select
+
+有時候可能會需要對關聯的資料做篩選，比如說：需要篩選出 Post 的 content 包含 Laravel 這個詞的 User：
+
+```php
+$user = $this->_user::with(['post' => function ($query) {
+    $query->where('content', 'like', '%Laravel%');
+}])->get();
+```
+
+用 with 來避免 N+1 problem，並傳送一個 Closure 來對其中的資料做篩選。
 
 ## 參考資料
 1. [Laravel 官方文件](https://laravel.com/docs/6.x/eloquent-relationships)
