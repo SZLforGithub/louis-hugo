@@ -4,7 +4,7 @@ description: "你遇到這樣的問題了嗎？"
 summary: "Git 到底怎麼用？怎麼修改剛剛的 Commit？想重來要怎麼做？Git 踩坑及用法紀錄"
 featured_image: "/images/git.png"
 tags: [學習筆記,版本控制]
-date: 2020-08-15T20:47:43+08:00
+date: 2020-06-14T20:47:43+08:00
 toc: true
 disable_share: true
 ---
