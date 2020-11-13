@@ -104,7 +104,7 @@ HOST: https//aglio.practice
 
 > 在進入下一個語法前，你如果覺得疑惑：「奇怪，我為什麼不把 Actions 寫在 Resource 那一層就好，這樣不就可以少一層嗎？」
 > 
-> 那你~~真的是要打屁股~~可以跳到文件的第41行，這裡開始定義了一個 /api/post/{id} 的 API Resource ，並用三種 (GET、PUT、DELETE) Actions 去操作它，這樣的分層語法方便我們創造出符合 Rest 風格的 API 文件。
+> 那你 ~~真的是要打屁股~~ 可以跳到文件的第41行，這裡開始定義了一個 /api/post/{id} 的 API Resource ，並用三種 (GET、PUT、DELETE) Actions 去操作它，這樣的分層語法方便我們創造出符合 Rest 風格的 API 文件。
 
 #### Request & Response
 接著就是 API 實際的內容了
