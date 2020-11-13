@@ -67,7 +67,7 @@ Laravel 的部分則是提出了 {{< inlineCode >}}php artisan optimize{{< /inli
 
 參考資料
 ---
-1. https://wiki.php.net/rfc/jit
+1. [PHP 官方手冊](https://wiki.php.net/rfc/jit)
 2. https://segmentfault.com/a/1190000021947001
 
 [^1]:AI, Blockchain, Cloud, Data, Edge computing, Mobile, Quantum
