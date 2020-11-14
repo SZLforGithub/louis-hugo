@@ -143,7 +143,7 @@ HOST: https//aglio.practice
 
 所以未來如果有更多的 API：
 
-![](https://i.imgur.com/f20ka4X.png)
+![](https://i.imgur.com/sLulVT3.png)
 
 除了讓文件更清楚以外，也方便多人協作。
 
