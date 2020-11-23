@@ -2,4 +2,4 @@
 
 # Hugo Repository
 
-It's just for my Github pages blog.
+It's just for [my Github pages blog](https://szlforgithub.github.io/).
