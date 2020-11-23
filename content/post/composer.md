@@ -43,7 +43,8 @@ require 'vendor/autoload.php';
 ---
 
 ### if (your_system == "Linux / Unix / macOS")
-[照著這份文件做](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)。
+[照著這份文件做](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)。  
+
 > 分為 Locally 和 Globally，下載方式大同小異，差別在於把 Composer 放在專案內 (Locally) 或是全局可訪問 (Globally)，[這裡有一些討論](https://stackoverflow.com/questions/35405851/composer-installation-global-vs-local)。
 
 首先請務必從 [Composer 正式的官網](https://getcomposer.org/download/)下載，依據執行下面四行指令：
@@ -55,10 +56,10 @@ php -r "unlink('composer-setup.php');"
 ```
 
 分別做的事情為
-1. 下載 composer-setup.php 安裝程式 
-2. 對下載的檔案做檢查，確保來源正確 
-3. 執行 composer-setup.php 開始安裝 
-4. 安裝完成後刪除 composer-setup.php 
+1. 下載 composer-setup.php 安裝程式  
+2. 對下載的檔案做檢查，確保來源正確  
+3. 執行 composer-setup.php 開始安裝  
+4. 安裝完成後刪除 composer-setup.php  
 
 ---
 
