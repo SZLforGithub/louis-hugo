@@ -55,7 +55,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 ```
 
-分別做的事情為
+分別做的事情為  
 1. 下載 composer-setup.php 安裝程式  
 2. 對下載的檔案做檢查，確保來源正確  
 3. 執行 composer-setup.php 開始安裝  
