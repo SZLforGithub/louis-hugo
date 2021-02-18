@@ -207,8 +207,8 @@ git rebase feature01
 ```git=
 git push origin master
 ```
-將分支 master 推上遠端數據庫 origin
-若有設定 remote，不帶參數執行 {{< inlineCode >}}git push{{< /inlineCode >}} 相當於 {{< inlineCode >}}git push <remote>{{< /inlineCode >}}
+將分支 master 推上遠端數據庫 origin  
+若有設定 remote，不帶參數執行 {{< inlineCode >}}git push{{< /inlineCode >}} 相當於 {{< inlineCode >}}git push <remote>{{< /inlineCode >}}  
 若沒有設定 remote ，不帶參數執行 {{< inlineCode >}}git push{{< /inlineCode >}} 相當於 {{< inlineCode >}}git push origin{{< /inlineCode >}}
 
 ---
@@ -216,9 +216,9 @@ git push origin master
 ```git=
 git pull origin master
 ```
-將遠端數據庫 origin 的 master 分支拉下並合併到本地數據庫
-若有設定 remote，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull <remote>{{< /inlineCode >}}
-若沒有設定 remote ，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull origin{{< /inlineCode >}}
+將遠端數據庫 origin 的 master 分支拉下並合併到本地數據庫  
+若有設定 remote，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull <remote>{{< /inlineCode >}}  
+若沒有設定 remote ，不帶參數執行 {{< inlineCode >}}git pull{{< /inlineCode >}} 相當於 {{< inlineCode >}}git pull origin{{< /inlineCode >}}  
 
 {{< inlineCode >}}git pull{{< /inlineCode >}} 做的事情實際上等於 {{< inlineCode >}}git fetch{{< /inlineCode >}} + {{< inlineCode >}}git merge{{< /inlineCode >}}，{{< inlineCode >}}git fetch{{< /inlineCode >}} 會比對本地與遠端的差別，並在本地形成分支，{{< inlineCode >}}git merge{{< /inlineCode >}} 則會將分支合併。
 
