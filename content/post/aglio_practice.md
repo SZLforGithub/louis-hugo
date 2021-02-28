@@ -3,6 +3,7 @@ title: "用 Aglio 做出漂亮的 API 文件"
 description: "欸，你可以寫一個超屌超漂亮超方便看的 API 文件嗎"
 summary: "Aglio 的簡單介紹，並透過一個 CRUD 的 API 作為例子。"
 featured_image: "/images/aglio.jpg"
+images: ["/images/aglio.jpg"]
 tags: [學習筆記,backend,心得分享]
 date: 2020-11-13T17:54:10+08:00
 toc: true

@@ -3,6 +3,7 @@ title: "CentOS 的 Permission denied (publickey,gssapi-keyex,gssapi-with-mic). �
 description: "為什麼內容農場的 SEO 這麼強可惡"
 summary: "新建 user ssh 時遇到的權限問題。"
 featured_image: "/images/linux.jpg"
+images: ["/images/linux.jpg"]
 tags: [學習筆記,Linux,心得分享]
 date: 2020-10-11T14:02:31+08:00
 toc: true
