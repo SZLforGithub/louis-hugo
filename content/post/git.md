@@ -10,8 +10,8 @@ toc: true
 disable_share: true
 ---
 
-什麼是 Git？
----
+## 什麼是 Git？
+
 Git 是一種分散式版本控制系統。
 
 ### 版本控制系統？
@@ -26,8 +26,8 @@ Git 是一種分散式版本控制系統。
 
 若您在公司使用的是SVN，但又想體驗 Git 自由自在的感覺，Git 也有和 SVN 溝通的 bridge，請 Google git svn。
 
-概念
----
+## 概念
+
 ![Git](https://i.imgur.com/94TZTAv.png "Git")
 Workspace 是工作目錄，index 或者 stage 是暫存區(所以也有一些文章將暫存區翻譯為索引)，local repository 是本地數據庫，remote repository 是遠端數據庫。
 
@@ -40,8 +40,8 @@ Workspace 是工作目錄，index 或者 stage 是暫存區(所以也有一些�
 另外有一個有趣的地方需要注意，如果先對 hello.php 做了 functionA 部份的修改後 add，再對同樣在 hello.php 中的 functionB 部份做修改，這時候 commit 的話只會對第一次修改做上傳，如果在上傳之前 git status 會看見 hello.php 同時出現在 Changes to be committed 和 Changes not staged for commit 中，這是因為 add 是對修改做快照，而不是檔案。
 
 
-常用指令
----
+## 常用指令
+
 ### git init
 切換到專案目錄並輸入，會在該目錄新增一個 .git目錄，代表 Git 開始對該目錄進行版控。
 
