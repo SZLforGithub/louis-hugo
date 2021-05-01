@@ -172,7 +172,7 @@ var_dump('' == '0'); // bool(false)
 這還只是一小部份，完成內容還是請參考[官方](https://www.php.net/manual/en/types.comparisons.php)，是不是看得頭很痛？那就對了，請愛用 {{< inlineCode >}}==={{< /inlineCode >}} 的嚴格比較，他會先檢查型別才檢查值，所以絕對不會出現意外。
 
 ## 結語
-花了一些時間爬官方文件，也自己寫了[範例](https://github.com/SZLforGithub/php-wtf)，梳理了長久以來不太在意的問題，這次算是學到一個教訓，也希望未來遇到所有的坑都要記得盡量探究到底。
+花了一些時間爬官方文件，也自己寫了簡單的[範例](https://github.com/SZLforGithub/php-wtf)，梳理了長久以來不太在意的問題，這次算是學到一個教訓，也希望未來遇到所有的坑都要記得盡量探究到底。
 
 ## References
 1. https://www.php.net/manual/en/types.comparisons.php
