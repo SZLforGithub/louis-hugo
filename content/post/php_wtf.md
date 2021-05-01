@@ -49,9 +49,9 @@ var_dump(isset($x)); // bool(false)
 
 ```
 
-> 容易混淆的部分：
-> 1. 給 0 算是有設置，這點算合理，之所以會做這個檢查是因為 {{< inlineCode >}}0 == null{{< /inlineCode >}} 會回傳 true，看看我都被 PHP 嚇成什麼樣子了
-> 2. 如果對一個變數 {{< inlineCode >}}unset{{< /inlineCode >}}，那他自然會變成 isset false 的狀態
+> 容易混淆的部分：  
+> 1. 給 0 算是有設置，這點算合理，之所以會做這個檢查是因為 {{< inlineCode >}}0 == null{{< /inlineCode >}} 會回傳 true，看看我都被 PHP 嚇成什麼樣子了  
+> 2. 如果對一個變數 {{< inlineCode >}}unset{{< /inlineCode >}}，那他自然會變成 isset false 的狀態  
 ```php
 $x = 0;
 var_dump(isset($x)); // bool(true)
@@ -105,7 +105,7 @@ var_dump(empty($x)); // bool(true)
 
 除了剛剛 {{< inlineCode >}}isset(){{< /inlineCode >}} 檢查的{{< inlineCode >}}undefined{{< /inlineCode >}}、{{< inlineCode >}}尚未給予初始值{{< /inlineCode >}}、{{< inlineCode >}}null{{< /inlineCode >}} 三種狀態以外，{{< inlineCode >}}0{{< /inlineCode >}}、{{< inlineCode >}}空字串{{< /inlineCode >}}、{{< inlineCode >}}空陣列{{< /inlineCode >}}、{{< inlineCode >}}'0'{{< /inlineCode >}}、{{< inlineCode >}}false{{< /inlineCode >}} 這幾種也算 empty
 
-> 容易混淆的部分：
+> 容易混淆的部分：  
 > 1. 後兩種 {{< inlineCode >}}'0'{{< /inlineCode >}} 和 {{< inlineCode >}}false{{< /inlineCode >}}，比較容易搞混，因為 {{< inlineCode >}}'1'{{< /inlineCode >}} 和 {{< inlineCode >}}true{{< /inlineCode >}} 並不算空
 
 ---
