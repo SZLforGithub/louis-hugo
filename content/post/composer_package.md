@@ -58,7 +58,7 @@ Minimum Stability []:
 ```
 這個欄位花了我一點時間才搞懂，[官方文件](https://getcomposer.org/doc/04-schema.md#minimum-stability)定義它由低到高有以下幾種值：{{< inlineCode >}}dev, alpha, beta, RC, and stable{{< /inlineCode >}}，並且標註了 {{< inlineCode >}}root-only{{< /inlineCode >}}。
 
-首先它預設的是 {{< inlineCode >}}stable{{< /inlineCode >}}，意思是當 A package 依賴 B package 時，若 B package 都低於穩定版本(stable)時，就會出問題。而 {{< inlineCode >}}root-only{{< /inlineCode >}} 的意思則是對當前 A package 向下的依賴有效， B package 的 {{< inlineCode >}}composer.json{{< /inlineCode >}} 裡面同樣也可以設置 {{< inlineCode >}}Minimun Stability{{< /inlineCode >}}，這時的 root 就變成 B package 了。
+首先它預設的是 {{< inlineCode >}}stable{{< /inlineCode >}}，意思是當 A package 依賴 B package 時，若 B package 低於穩定版本(stable)時，就會出問題。而 {{< inlineCode >}}root-only{{< /inlineCode >}} 的意思則是對當前 A package 向下的依賴有效， B package 的 {{< inlineCode >}}composer.json{{< /inlineCode >}} 裡面同樣也可以設置 {{< inlineCode >}}Minimun Stability{{< /inlineCode >}}，這時的 root 就變成 B package 了。
 
 講到這裡你應該可以明白，這個欄位做的是穩定性檢查，當你設為 {{< inlineCode >}}stable{{< /inlineCode >}} 時，你就可以確保你依賴的其他 Package 都會是 {{< inlineCode >}}stable{{< /inlineCode >}}。
 
@@ -148,7 +148,7 @@ class Test
 記得檔名跟類別名都要遵守 psr-4 的規範，到這裡已經基本完成整個 package 的內容了。
 
 ### Step 4. 上傳
-到 [packagist](https://packagist.org/) 申請一個帳號，點擊右上方的 Submit：
+到 [Packagist](https://packagist.org/) 申請一個帳號，點擊右上方的 Submit：
 ![](https://i.imgur.com/DPQG7yE.png)
 然後你會發現需要一個 Github Repository 的網址：
 ![](https://i.imgur.com/AxPjtaO.png)
