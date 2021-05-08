@@ -3,8 +3,8 @@ title: "PHP 關於 zero、false、null 和 isset、empty、is_null 之間的恩�
 description: "下次再搞錯我就從這裡跳下去！"
 summary: "PHP 混亂的空值判斷和隱藏在其後的自動轉型，惡名昭彰的程度應該只在 JS 之下，這是一篇自己梳理過一遍的紀錄。"
 featured_image: "/images/php.jpg"
-images: ["/images/php_best_practices.png"]
-tags: [學習筆記,backend,心得分享]
+images: ["/images/php.jpg"]
+tags: [學習筆記,backend,心得分享,PHP]
 date: 2021-05-01T13:08:19+08:00
 toc: true
 disable_share: true
