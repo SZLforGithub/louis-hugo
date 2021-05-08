@@ -56,7 +56,7 @@ Author [Louis.Su <i0989872540@gmail.com>, n to skip]:
 ```
 Minimum Stability []:
 ```
-這個值花了我一點時間才搞懂，[官方文件](https://getcomposer.org/doc/04-schema.md#minimum-stability)定義它由低到高有以下幾種值：{{< inlineCode >}}dev, alpha, beta, RC, and stable{{< /inlineCode >}}，並且標註了 {{< inlineCode >}}root-only{{< /inlineCode >}}。
+這個欄位花了我一點時間才搞懂，[官方文件](https://getcomposer.org/doc/04-schema.md#minimum-stability)定義它由低到高有以下幾種值：{{< inlineCode >}}dev, alpha, beta, RC, and stable{{< /inlineCode >}}，並且標註了 {{< inlineCode >}}root-only{{< /inlineCode >}}。
 
 首先它預設的是 {{< inlineCode >}}stable{{< /inlineCode >}}，意思是當 A package 依賴 B package 時，若 B package 都低於穩定版本(stable)時，就會出問題。而 {{< inlineCode >}}root-only{{< /inlineCode >}} 的意思則是對當前 A package 向下的依賴有效， B package 的 {{< inlineCode >}}composer.json{{< /inlineCode >}} 裡面同樣也可以設置 {{< inlineCode >}}Minimun Stability{{< /inlineCode >}}，這時的 root 就變成 B package 了。
 
