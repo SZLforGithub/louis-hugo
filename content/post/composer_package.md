@@ -139,7 +139,7 @@ Would you like to install dependencies now [yes]? yes
 namespace Louis;
 class Test 
 {
-    function test()
+    public function test()
     {
         echo "This is my first composer package!";
     }
