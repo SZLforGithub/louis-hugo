@@ -159,6 +159,21 @@ class Test
 
 ![](https://i.imgur.com/s2GsKBf.png)
 
+### Step 5. 推上 Semantic Version
+在正式讓別人可以 {{< inlineCode >}}composer require{{< /inlineCode >}} 之前，還必須推上你的版號，還記得前面提到的 Minimum Stability 嗎？如果你填的是 dev 的話就不影響，但如果是預設的 stable 的話，沒有上版號是沒有辦法使用的：
+```
+[InvalidArgumentException]
+  Could not find a version of package <package name> matching your minimum-stability (stable). Require it
+  with an explicit version constraint allowing its desired stability.
+```
+
+所以你必須在你的專案中下：
+```bash
+$ git tag -a v1.0.0 -m "first version"
+$ git push --tag
+```
+才代表這個專案有穩定版本可以使用。
+
 以上程式碼可以在這個 [Repository](https://github.com/SZLforGithub/composer-practice) 看到。
 
 ### 測試
