@@ -12,6 +12,8 @@ enableRobotsTXT = true
 summaryLength = 1
 enableEmoji = true
 disqusShortname = "louissublog"
+paginatePath = "/"
+
 
 [sitemap]
   changefreq = "monthly"
