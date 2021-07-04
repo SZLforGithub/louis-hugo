@@ -11,7 +11,6 @@ googleAnalytics = "UA-169325906-1"
 enableRobotsTXT = true
 summaryLength = 1
 enableEmoji = true
-disqusShortname = "louissublog"
 paginatePath = "/"
 
 
