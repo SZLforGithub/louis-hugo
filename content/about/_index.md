@@ -1,7 +1,9 @@
 ---
 title: "About"
+description: "Hey! I'm Louis!"
 weight: 2
 featured_image: '/images/notebook.jpg'
+images: ["/images/about.jpg"]
 ---
 
 {{< figure src="/images/about.jpg" class="circle" >}}
