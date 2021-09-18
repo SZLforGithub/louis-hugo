@@ -43,7 +43,7 @@ Hi there，這次要分享的是最近工作上用到的 SSOCR (Seven Segment Op
 
 [![php_ssocr](/images/php_ssocr.png)](https://github.com/SZLforGithub/ssocr-php)
 
-登愣！所以我自己寫了一個，所以現在有了！  
+登愣！我自己寫了一個，所以現在有了！  
 
 ## 演算法實作
 其實只是一個很簡單的小套件，我基本上就是參考了[ssocr 文件](https://www.unix-ag.uni-kl.de/~auerswal/ssocr/index.html)中的做法：  
@@ -242,4 +242,4 @@ protected $lineNumbers = [
 然後不得不自誇一下，我這個註解畫得真有靈性。  
 
 ## 結論
-以上的文字搭配程式碼應該可以理解整個演算法的邏輯，我寫完之後有丟上 [Packagist](https://packagist.org/packages/louissu/ssocr-php) 了，相關的安裝與使用方式也可以在[文件](https://github.com/SZLforGithub/ssocr-php)裡面看到，希望這個套件能幫助到你，如果有任何功能也歡迎發 issue 或 pr，感謝你看到這，掰啦！
+以上的文字搭配程式碼應該可以理解整個演算法的邏輯，我寫完之後有丟上 [Packagist](https://packagist.org/packages/louissu/ssocr-php) 了，相關的安裝與使用方式也可以在[文件](https://github.com/SZLforGithub/ssocr-php)裡面看到，希望這個套件能幫助到你，如果有任何功能及建議也歡迎發 issue 或 pr，感謝你看到這，掰啦！
