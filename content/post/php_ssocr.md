@@ -28,8 +28,8 @@ Hi there，這次要分享的是最近工作上用到的 SSOCR (Seven Segment Op
 3. 根據二值化後的黑點分佈來做字體的判斷  
 
 但是在七段顯示器中，每個柱狀體之間是有空間的，再加上每個柱狀體又奇形怪狀的，所以很容易被視為雜訊。  
-> 這一篇心得文主要會著重在演算法的實作，若是對嘗試過程和套件之間的比較有興趣的話，可以移駕[我在公司內部分享會的簡報](https://docs.google.com/presentation/d/1--NM50IYO74ubPAd5qJz3QPYG_KRzoJimyJneJjMnkI/edit?usp=sharing) (已移除產品相關的敏感資訊)，裡面記錄了我撞牆的過程。  
->  
+> 這一篇心得文主要會著重在演算法的實作，若是對嘗試過程和套件之間的比較有興趣的話，可以移駕[我在公司內部分享會的簡報](https://docs.google.com/presentation/d/1--NM50IYO74ubPAd5qJz3QPYG_KRzoJimyJneJjMnkI/edit?usp=sharing) (已移除產品相關的敏感資訊)，裡面記錄了我撞牆的過程。
+> 
 > 其實這種場景目前比較主流的解決方案都是 train 一個 AI model 去辨識，因為七段顯示器也算是相對單純的 input，但礙於時間壓力和我本人的經驗不足，所以並沒有在產品上選用這個方案。
 
 ## 解決方案
