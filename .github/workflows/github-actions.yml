@@ -26,7 +26,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           # external_repository: SZLforGithub/SZLforGithub.github.io
           external_repository: SZLforGithub/test-github-actions-deploy-hugo
           publish_branch: master
