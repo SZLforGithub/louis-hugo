@@ -27,8 +27,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          # external_repository: SZLforGithub/SZLforGithub.github.io
-          external_repository: SZLforGithub/test-github-actions-deploy-hugo
+          external_repository: SZLforGithub/SZLforGithub.github.io
           publish_branch: master
 
 
