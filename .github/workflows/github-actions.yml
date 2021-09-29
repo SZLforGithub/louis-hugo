@@ -1,0 +1,36 @@
+name: Github Actions
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Deploy-Hugo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.72.0'
+
+      - name: Build
+        run: hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # external_repository: SZLforGithub/SZLforGithub.github.io
+          external_repository: SZLforGithub/test-github-actions-deploy-hugo
+          publish_branch: master
+
+
+
+
