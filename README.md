@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/SZLforGithub/louis-hugo.svg?branch=master)](https://travis-ci.com/SZLforGithub/louis-hugo)
+# Louis's Blog!
 
-# Hugo Repository
-
-It's just for [my Github pages blog](https://szlforgithub.github.io/).
+It's [my Github pages blog](https://szlforgithub.github.io/).
