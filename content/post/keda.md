@@ -73,10 +73,6 @@ HPA 根據提供的 metrics 進行計算，調整 Workload 中 Pod 的 replica �
 4. 持續監控變化  
 當 event metrics 改變時，KEDA 持續更新數據並動態調整 Pod 的數量。
 
-從系統設計上，我會把 KEDA 理解為 HPA 和 external metrics 的中間層，把 metrics 的轉換和 Kubernetes 的溝通這兩段抽離出來，使用 KEDA 時不需要我和外部系統如何溝通，也不需要自己實作 Adapter。
-
-這些細節被封裝在 KEDA 中，降低了 Kubernetes 中基於外部 events 或是 metrics 來做 Autoscaling 的複雜度。
-
 ## Example
 要使用 KEDA 很簡單，只需要直接定義一個 ScaledObject 的 Resource:
 ```yaml
